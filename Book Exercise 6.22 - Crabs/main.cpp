@@ -7,9 +7,57 @@
 //
 
 #include <iostream>
+#include <iomanip>
+#include <cmath>
+// #include <Windows.h>
+using namespace std;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int roll_dice() {
+    
+    int die_value = (rand() % 6 + 1);
+    
+    return die_value;
+}
+
+int add_dice(int d1, int d2) {
+    
+    return d1 + d2;
+}
+
+int main() {
+    
+    // random seed
+    srand(time(0));
+    
+    // get text color handle?
+    // HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+    
+    int point = 0;
+    
+    cout << "Crabs : Lucky 7 or 11 \n";
+    
+    cout << "Roll the Dice! \n";
+    
+    int d1 = roll_dice(), d2 = roll_dice();
+    
+    cout << "You rolled " << d1 << " and " << d2 << endl;
+    
+    int come_out_roll = add_dice(d1, d2);
+    
+    if (come_out_roll == 7 || come_out_roll == 11) {
+        cout << "You threw " << come_out_roll << ", WINNER!!" << endl;
+    } else if (come_out_roll == 2 || come_out_roll == 3 || come_out_roll == 12) {
+        // cout << SetConsoleTextAttribute (handle, 12); // console colors not working in Xcode
+        cout << "You threw " << come_out_roll << ", CRAPS, TRY AGAIN!!" << endl;
+    } else {
+        cout << "You threw " << come_out_roll << ", the POINT is " << come_out_roll << ", HOT SHOOTER" << endl;
+    }
+    
+    cout << "You Win! \n";
+    
+    cout << "You Lose! \n";
+    
+    cout << "Play Again! \n";
+    
     return 0;
 }
