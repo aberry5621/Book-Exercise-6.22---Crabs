@@ -29,8 +29,6 @@ int main() {
     // random seed
     srand(time(0));
     
-    // get text color handle?
-    // HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
     
     int point = 0;
     
@@ -47,9 +45,9 @@ int main() {
     if (come_out_roll == 7 || come_out_roll == 11) {
         cout << "You threw " << come_out_roll << ", WINNER!!" << endl;
     } else if (come_out_roll == 2 || come_out_roll == 3 || come_out_roll == 12) {
-        // cout << SetConsoleTextAttribute (handle, 12); // console colors not working in Xcode
         cout << "You threw " << come_out_roll << ", CRAPS, TRY AGAIN!!" << endl;
     } else {
+        point = come_out_roll;
         cout << "You threw " << come_out_roll << ", the POINT is " << come_out_roll << ", HOT SHOOTER" << endl;
     }
     
