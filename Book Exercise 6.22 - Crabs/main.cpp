@@ -43,19 +43,22 @@ int main() {
     int come_out_roll = add_dice(d1, d2);
     
     if (come_out_roll == 7 || come_out_roll == 11) {
+        
         cout << "You threw " << come_out_roll << ", WINNER!!" << endl;
+        
     } else if (come_out_roll == 2 || come_out_roll == 3 || come_out_roll == 12) {
+        
         cout << "You threw " << come_out_roll << ", CRAPS, TRY AGAIN!!" << endl;
+        
     } else {
+        
         point = come_out_roll;
-        cout << "You threw " << come_out_roll << ", the POINT is " << come_out_roll << ", HOT SHOOTER" << endl;
+        
+        cout << "You threw " << come_out_roll << ", the POINT is " << point << endl;
+        cout << "Throw the dice again!" << endl;
     }
     
-    cout << "You Win! \n";
     
-    cout << "You Lose! \n";
-    
-    cout << "Play Again! \n";
     
     return 0;
 }
