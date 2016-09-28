@@ -5,6 +5,18 @@
 //  Created by ax on 9/28/16.
 //  Copyright © 2016 COMP130. All rights reserved.
 //
+/*
+  -------  
+ | *   * |
+ |   *   |
+ | *   * |
+  -------
+  -------
+ | *   * |
+ | *   * |
+ | *   * |
+  -------
+*/
 
 #include <iostream>
 #include <iomanip>
