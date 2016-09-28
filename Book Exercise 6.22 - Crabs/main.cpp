@@ -55,7 +55,36 @@ int main() {
         point = come_out_roll;
         
         cout << "You threw " << come_out_roll << ", the POINT is " << point << endl;
-        cout << "Throw the dice again!" << endl;
+        cout << "Shoot the dice again!" << endl;
+        
+        int shooter_roll = 0;
+        
+        do {
+            // shooting for the point
+            
+            cout << "Press the 'S' key to shoot the dice!" << endl;
+            char key_input = ' ';
+            
+            do {
+                
+                cin >> key_input;
+                
+            } while (key_input != 'S');
+            
+            
+            shooter_roll = add_dice(roll_dice(), roll_dice());
+            
+            cout << "You rolled a " << shooter_roll << endl;
+            
+        } while (point != shooter_roll && shooter_roll != 7);
+        
+        if (shooter_roll == 7) {
+            cout << "SEVEN, game over!" << endl;
+        } else {
+            cout << "You made the point?!" << endl;
+        }
+        
+        
     }
     
     
